@@ -1,0 +1,13 @@
+.bg-main {
+  background-color: #019267 !important;
+}
+
+.btn-main {
+  background-color: #ffd365 !important;
+  color: whitesmoke;
+  border: #ffd365 !important;
+}
+
+.btn-main:hover {
+  background-color: #fde199 !important;
+}
