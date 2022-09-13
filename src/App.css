@@ -1,6 +1,5 @@
 .border-main {
-  border-color: #019267 !important;
-  border-width: 10rem !important;
+  border: 10px solid #019267;
   background-color: #ebecc1;
 }
 

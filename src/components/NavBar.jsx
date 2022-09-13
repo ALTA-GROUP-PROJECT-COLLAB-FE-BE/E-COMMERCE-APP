@@ -2,18 +2,24 @@ import React from "react";
 import "./NavBar.css";
 import { Button, Container, Form, Nav, Navbar } from "react-bootstrap";
 import { BsCartFill } from "react-icons/bs";
+import { BiSearchAlt } from "react-icons/bi";
 
 function NavBar() {
   return (
     <header>
       <Navbar className="bg-main rounded-bottom shadow-lg">
         <Container>
-          <Navbar.Brand href="#home" className="fw-bold text-white">
+          <Navbar.Brand href="/" className="fw-bold text-white">
             E-Commerce
           </Navbar.Brand>
           <Form>
             <Form.Group>
-              <Form.Control type="search" placeholder="Search..." className="d-none d-sm-block" />
+              <div className="icon-inside">
+                <i>
+                  <BiSearchAlt style={{ width: "20px", height: "20px" }} />
+                </i>
+                <input type="search" placeholder="Search..." className="d-none d-sm-block custom-search" />
+              </div>
               <Button type="submit" className="visually-hidden"></Button>
             </Form.Group>
           </Form>

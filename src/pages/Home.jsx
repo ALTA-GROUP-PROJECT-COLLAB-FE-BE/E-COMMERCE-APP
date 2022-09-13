@@ -28,8 +28,8 @@ function Home() {
     <>
       <CarouselHead />
       <section>
-        <Container className="my-5 px-auto border border-5 rounded border-main justify-center align-items-center">
-          <div className="row row-cols-4 mx-auto">
+        <Container className="my-5 px-auto rounded border-main justify-center align-items-center">
+          <div className="row mx-auto">
             {products.map((product) => {
               return <CardItems image={product.image} price={product.price} title={product.title} key={product.id} />;
             })}
