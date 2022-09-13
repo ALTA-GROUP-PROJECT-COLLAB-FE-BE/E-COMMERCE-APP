@@ -1,6 +1,7 @@
 import React from "react";
 import "../App.css";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
+import { BsTrash } from "react-icons/bs";
 
 function Cart() {
   return (
@@ -36,14 +37,14 @@ function Cart() {
                           </td>
                           <td></td>
                           <td>
-                            <input type="number" value="0" className="form-control" />
+                            <input type="number" value="2" className="form-control" />
                           </td>
                           <td>$123.00</td>
                           <td>$246.00</td>
                           <td>
-                            <a href="#">
-                              <i className="fa fa-trash-o"></i>
-                            </a>
+                            <div href="#" className="pointer">
+                              <BsTrash />
+                            </div>
                           </td>
                         </tr>
                         <tr>
@@ -57,14 +58,14 @@ function Cart() {
                           </td>
                           <td></td>
                           <td>
-                            <input type="number" value="0" className="form-control" />
+                            <input type="number" value="1" className="form-control" />
                           </td>
                           <td>$200.00</td>
                           <td>$200.00</td>
                           <td>
-                            <a href="#">
-                              <i className="fa fa-trash-o"></i>
-                            </a>
+                            <div href="#" className="pointer">
+                              <BsTrash />
+                            </div>
                           </td>
                         </tr>
                       </tbody>
