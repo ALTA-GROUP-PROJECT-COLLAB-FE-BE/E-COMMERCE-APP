@@ -28,7 +28,7 @@ function NavBar() {
               <BsCartFill style={{ width: "2rem", height: "2rem" }} />
             </Nav.Link>
             <Nav.Link href="/login">
-              <Button className="btn-main">Login</Button>
+              <Button className="button-secondary">Login</Button>
             </Nav.Link>
           </Nav>
         </Container>

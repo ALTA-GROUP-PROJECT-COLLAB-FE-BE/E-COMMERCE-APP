@@ -9,9 +9,8 @@ body {
   background-color: #019267 !important;
 }
 
-.bg-secondary {
+.bg-secondaryy {
   background-color: #fdffa9 !important;
-  color: black !important;
 }
 .border-main {
   border: 10px solid #019267;
@@ -19,7 +18,7 @@ body {
 }
 
 .card-color {
-  background-color: #d6e8e3;
+  background-color: #019267;
 }
 
 .pointer {
@@ -35,9 +34,9 @@ body {
 }
 
 .button-secondary {
-  background-color: #ffd365;
-  border: none;
-  color: black;
+  background-color: #ffd365 !important;
+  border: none !important;
+  color: black !important;
   padding: 8px 12px 8px 12px;
   border-radius: 5px;
 }
@@ -47,7 +46,7 @@ body {
   color: white;
 }
 .button-secondary:hover {
-  background-color: #fde199;
+  background-color: #fde199 !important;
 }
 
 .btn-main {
