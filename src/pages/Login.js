@@ -1,12 +1,12 @@
 import { Form, Button } from "react-bootstrap"
-import Header from "../component/Header"
+
 import { Link } from "react-router-dom"
 import '../Style/Login.css';
 
 const Login = () => {
     return (
         <div>
-            <Header />
+        
             <main className="form-container">
                 <Form className="form-box m-auto">
                     <h1 className="login">Login</h1>
