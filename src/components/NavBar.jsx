@@ -24,10 +24,10 @@ function NavBar() {
             </Form.Group>
           </Form>
           <Nav className="justify-end align-items-center gap-3">
-            <Nav.Link href="#cart">
+            <Nav.Link href="/cart">
               <BsCartFill style={{ width: "2rem", height: "2rem" }} />
             </Nav.Link>
-            <Nav.Link href="#login">
+            <Nav.Link href="/login">
               <Button className="btn-main">Login</Button>
             </Nav.Link>
           </Nav>

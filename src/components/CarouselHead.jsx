@@ -20,7 +20,7 @@ function CarouselHead() {
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item style={{ height: "19rem" }}>
-        <img className="d-block w-100" src="https://via.placeholder.com/400x300" alt="Third slide" />
+        <img className="d-block w-100" src="https://via.placeholder.com/800x400" alt="Third slide" />
 
         <Carousel.Caption>
           <h3>Third slide label</h3>
