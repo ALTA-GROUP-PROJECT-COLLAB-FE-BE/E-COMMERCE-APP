@@ -1,0 +1,62 @@
+html, body{
+    height: 100%;
+}
+
+.form-container-register{
+    display: flex;
+    width: 100vw;
+    height: 80vh;
+    font-family: 'Poppins';
+}
+
+.form-box-regis {
+    max-width: 800px;
+    padding: 30px;
+    box-shadow: rgb(86, 86, 88) 3px 3px 4px;
+    border-radius: 8px;
+    background-color: #E7E5E5;
+}
+
+.register{
+    padding-left: 125px;
+    font-family: 'Poppins'; font-size: 40px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+
+.form-container-register .start{
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 1px;
+}
+
+.sub-title{
+    margin-bottom: 1px;
+    padding-top: 1px;
+}
+
+.email-regis{
+    margin-bottom: 2px;
+    box-shadow: rgb(86, 86, 88) 0px 2px 3px;
+    height: 38px;
+    font-size: 12px;
+}
+
+.password-regis{
+    box-shadow: rgb(86, 86, 88) 0px 2px 3px;
+    height: 38px;
+    font-size: 12px;
+}
+
+.middle{
+    margin-bottom: 20px;
+
+}
+
+.button-regis .sign{
+    width: 390px;
+    box-shadow: rgb(86, 86, 88) 3px 3px 2px;
+    background-color: #00C897;
+    margin-bottom: 20px;
+}

@@ -1,3 +1,4 @@
+
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
@@ -7,6 +8,8 @@ import Detail from "./pages/Detail";
 import EditProduct from "./pages/EditProduct";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
+import Login from './pages/Login';
+import Register from './pages/Register';
 
 function App() {
   return (
@@ -18,6 +21,8 @@ function App() {
           <Route path="/detail/:id" element={<Detail />} />
           <Route path="/edit-product" element={<EditProduct />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path='/Login' element={<Login />} />
+          <Route path='/Register' element={<Register />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
@@ -25,5 +30,6 @@ function App() {
     </>
   );
 }
+
 
 export default App;
