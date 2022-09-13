@@ -14,11 +14,11 @@ function NavBar() {
           </Navbar.Brand>
           <Form>
             <Form.Group>
-              <div className="icon-inside">
+              <div className="icon-inside d-none d-md-block ">
                 <i>
                   <BiSearchAlt style={{ width: "20px", height: "20px" }} />
                 </i>
-                <input type="search" placeholder="Search..." className="d-none d-sm-block custom-search" />
+                <input type="search" placeholder="Search..." className="custom-search" />
               </div>
               <Button type="submit" className="visually-hidden"></Button>
             </Form.Group>
