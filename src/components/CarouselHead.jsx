@@ -1,33 +1,16 @@
 import React from "react";
-import { Carousel } from "react-bootstrap";
+import "../App.css";
 
 function CarouselHead() {
   return (
-    <Carousel fade>
-      <Carousel.Item style={{ height: "19rem" }}>
-        <img className="w-100" src="https://via.placeholder.com/800x400" alt="First slide" />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item style={{ height: "19rem" }}>
-        <img className="w-100" src="https://via.placeholder.com/800x400" alt="Second slide" />
-
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item style={{ height: "19rem" }}>
-        <img className="d-block w-100" src="https://via.placeholder.com/800x400" alt="Third slide" />
-
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
+    <header class="bg-secondary py-5">
+      <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+          <h1 class="display-4 fw-bolder">Shop in style</h1>
+          <p class="lead fw-normal text-white-50 mb-0">SHOP WHAT EVER YOU WANT</p>
+        </div>
+      </div>
+    </header>
   );
 }
 

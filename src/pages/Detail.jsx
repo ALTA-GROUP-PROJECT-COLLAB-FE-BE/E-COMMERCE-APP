@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { BsFillCartPlusFill } from "react-icons/bs";
+import "../App.css";
 
 function Detail() {
   const [products, setProducts] = useState([]);
@@ -26,23 +28,30 @@ function Detail() {
 
   return (
     <>
-      <div className="container" style={{ height: 1000 }}>
-        <div className="row mx-auto justify-content-center ">
-          <div className="col-auto align-self-center">
-            <img src={products.image} alt={products.title} className="image-fluid" style={{ width: "11rem", height: "15rem" }} />
-          </div>
-          <div className="col-3">
-            <div className="card" style={{ width: "18rem" }}>
-              <div className="card-body">
-                <h5 className="card-title">{products.title}</h5>
-                <h6 className="card-subtitle mb-2 text-muted">${products.price}</h6>
-                <p className="card-text">{products.description}</p>
-                <button>Add To Cart</button>
+      <section className="py-5 vh-150">
+        <div className="container px-4 px-lg-5 my-5">
+          <div className="row gx-4 gx-lg-5 align-items-center">
+            <div className="col-md-6">
+              <img className="card-img-top mb-5 mb-md-0" src={products.image} alt={products.title} />
+            </div>
+            <div className="col-md-6">
+              <h1 className="display-6 fw-bold">{products.title}</h1>
+              <div className="fs-5 mb-5 fw-semibold mt-md-3">
+                <span>${products.price}</span>
+              </div>
+              <div className="card mb-md-3 mb-0 p-3 shadow">
+                <p className="fw-semibold fs-5">Description</p>
+                <p className="lead">{products.description}</p>
+              </div>
+              <div className="d-flex">
+                <button className=" flex-shrink-0 button-main shadow" type="button">
+                  Add To Cart <BsFillCartPlusFill />
+                </button>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

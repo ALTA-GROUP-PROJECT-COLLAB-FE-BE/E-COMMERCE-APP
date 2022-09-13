@@ -1,5 +1,5 @@
 import React from "react";
-import "./NavBar.css";
+import "../App.css";
 import { Button, Container, Form, Nav, Navbar } from "react-bootstrap";
 import { BsCartFill } from "react-icons/bs";
 import { BiSearchAlt } from "react-icons/bi";
