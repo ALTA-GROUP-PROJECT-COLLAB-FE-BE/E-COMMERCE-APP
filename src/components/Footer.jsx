@@ -11,20 +11,14 @@ function Footer() {
             E-Commerce
           </Navbar.Brand>
           <Nav className="justify-end align-items-center ">
-            <Nav.Link>
-              <a href="#insta" className="text-white">
-                <BsInstagram style={{ width: "1.2rem", height: "1.2rem" }} />
-              </a>
+            <Nav.Link href="#insta" className="text-white">
+              <BsInstagram style={{ width: "1.2rem", height: "1.2rem" }} />
             </Nav.Link>
-            <Nav.Link>
-              <a href="#facebook" className="text-white">
-                <BsFacebook style={{ width: "1.2rem", height: "1.2rem" }} />
-              </a>
+            <Nav.Link href="#facebook" className="text-white">
+              <BsFacebook style={{ width: "1.2rem", height: "1.2rem" }} />
             </Nav.Link>
-            <Nav.Link>
-              <a href="#twitter" className="text-white">
-                <BsTwitter style={{ width: "1.2rem", height: "1.2rem" }} />
-              </a>
+            <Nav.Link href="#twitter" className="text-white">
+              <BsTwitter style={{ width: "1.2rem", height: "1.2rem" }} />
             </Nav.Link>
           </Nav>
           <p className="d-block mb-0 text-white">Copyright</p>

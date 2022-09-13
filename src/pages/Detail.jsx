@@ -32,11 +32,11 @@ function Detail() {
             <img src={products.image} alt={products.title} className="image-fluid" style={{ width: "11rem", height: "15rem" }} />
           </div>
           <div className="col-3">
-            <div class="card" style={{ width: "18rem" }}>
-              <div class="card-body">
-                <h5 class="card-title">{products.title}</h5>
-                <h6 class="card-subtitle mb-2 text-muted">${products.price}</h6>
-                <p class="card-text">{products.description}</p>
+            <div className="card" style={{ width: "18rem" }}>
+              <div className="card-body">
+                <h5 className="card-title">{products.title}</h5>
+                <h6 className="card-subtitle mb-2 text-muted">${products.price}</h6>
+                <p className="card-text">{products.description}</p>
                 <button>Add To Cart</button>
               </div>
             </div>
