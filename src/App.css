@@ -11,7 +11,7 @@ body {
 
 .bg-secondary {
   background-color: #fdffa9 !important;
-  color: #555;
+  color: black !important;
 }
 .border-main {
   border: 10px solid #019267;
@@ -91,9 +91,8 @@ h1 {
 }
 
 .box {
-  background: #fff;
   margin: 0 0 30px;
-  border: solid 1px #e6e6e6;
+
   padding: 30px;
   -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
@@ -101,15 +100,15 @@ h1 {
 
 .box .box-header {
   clear: both;
-  background: #f7f7f7;
+  background: #e6dede;
   margin: -20px -20px 20px;
   padding: 20px;
   border-bottom: solid 1px #eee;
+  border-radius: 10px;
 }
 
 .box .box-footer {
   clear: both;
-  background: #f7f7f7;
   margin: 30px -20px -20px;
   padding: 20px;
   border-top: solid 1px #eee;

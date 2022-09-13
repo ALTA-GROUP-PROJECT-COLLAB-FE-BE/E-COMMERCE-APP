@@ -10,12 +10,12 @@ function Cart() {
         <div className="container">
           <div className="row">
             <div id="cart" className="col-lg-9">
-              <div className="box">
+              <div className="box border-main rounded">
                 <form method="post" action="">
                   <h1>Shopping cart</h1>
                   <p className="text-muted">You currently have 3 item(s) in your cart.</p>
                   <div className="table-responsive">
-                    <table className="table justify-content-around">
+                    <table className="table justify-content-around text-black border-none">
                       <thead>
                         <tr>
                           <th colSpan="2">Product</th>
@@ -27,7 +27,7 @@ function Cart() {
                       </thead>
                       <tbody>
                         <tr>
-                          <td>
+                          <td className="d-md-block d-none">
                             <a href="#">
                               <img src="img/detailsquare.jpg" alt="White Blouse Armani" />
                             </a>
@@ -48,7 +48,7 @@ function Cart() {
                           </td>
                         </tr>
                         <tr>
-                          <td>
+                          <td className="d-md-block d-none">
                             <a href="#">
                               <img src="img/basketsquare.jpg" alt="Black Blouse Armani" />
                             </a>
@@ -95,9 +95,9 @@ function Cart() {
             </div>
             {/* Order Summary */}
             <div className="col-lg-3">
-              <div id="order-summary" className="box">
+              <div id="order-summary" className="box border-main rounded">
                 <div className="box-header">
-                  <h3 className="mb-0">Order summary</h3>
+                  <h3 className="mb-0 text-center">Order summary</h3>
                 </div>
                 <p className="text-muted">Shipping and additional costs are calculated based on the values you have entered.</p>
                 <div className="table-responsive">
