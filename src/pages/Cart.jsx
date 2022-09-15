@@ -1,7 +1,8 @@
 import React from "react";
-import "../App.css";
-import { MdOutlineArrowForwardIos } from "react-icons/md";
 import { BsTrash } from "react-icons/bs";
+import { MdOutlineArrowForwardIos } from "react-icons/md";
+import { NavLink } from "react-router-dom";
+import "../App.css";
 
 function Cart() {
   return (
@@ -28,12 +29,12 @@ function Cart() {
                       <tbody>
                         <tr>
                           <td className="d-md-block d-none">
-                            <a href="#">
+                            <div>
                               <img src="img/detailsquare.jpg" alt="White Blouse Armani" />
-                            </a>
+                            </div>
                           </td>
                           <td>
-                            <a href="#">White Blouse Armani</a>
+                            <div>White Blouse Armani</div>
                           </td>
                           <td></td>
                           <td>
@@ -42,19 +43,19 @@ function Cart() {
                           <td>$123.00</td>
                           <td>$246.00</td>
                           <td>
-                            <div href="#" className="pointer">
+                            <div className="pointer">
                               <BsTrash />
                             </div>
                           </td>
                         </tr>
                         <tr>
                           <td className="d-md-block d-none">
-                            <a href="#">
+                            <div>
                               <img src="img/basketsquare.jpg" alt="Black Blouse Armani" />
-                            </a>
+                            </div>
                           </td>
                           <td>
-                            <a href="#">Black Blouse Armani</a>
+                            <div>Black Blouse Armani</div>
                           </td>
                           <td></td>
                           <td>
@@ -63,7 +64,7 @@ function Cart() {
                           <td>$200.00</td>
                           <td>$200.00</td>
                           <td>
-                            <div href="#" className="pointer">
+                            <div className="pointer">
                               <BsTrash />
                             </div>
                           </td>
@@ -80,14 +81,16 @@ function Cart() {
                   {/* <!-- /.table-responsive--> */}
                   <div className="box-footer d-flex justify-content-between flex-column flex-lg-row">
                     <div className="left mb-lg-0 mb-2">
-                      <a href="category.html" className="button-main text-decoration-none">
+                      <NavLink to="/" className="button-main text-decoration-none">
                         Continue shopping
-                      </a>
+                      </NavLink>
                     </div>
                     <div className="right">
-                      <button type="submit" className="button-secondary">
-                        Checkout <MdOutlineArrowForwardIos />
-                      </button>
+                      <NavLink to="/checkout">
+                        <button type="submit" className="button-secondary">
+                          Checkout <MdOutlineArrowForwardIos />
+                        </button>
+                      </NavLink>
                     </div>
                   </div>
                 </form>

@@ -9,27 +9,26 @@ const Login = ({ token, setToken }) => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  
   const loginHandler = () => {
     setError("");
     setUserName("");
     setPassword("");
     axios({
-      url: "https://fakestoreapi.com/auth/login",
+      url: "http://3.86.24.153:8000/auth",
       method: "POST",
       data: {
-        username: userName,
+        email: userName,
         password: password,
       },
     })
       .then((res) => {
-        console.log(res.data.token);
-        setToken(res.data.token);
-        localStorage.setItem("userToken", res.data.token);
+        console.log(res.data.data);
+        setToken(res.data.data);
+        localStorage.setItem("userToken", res.data.data);
       })
       .catch((err) => {
-        console.log(err.response.data);
-        setError(err.response.data);
+        console.log(err.response.data.message);
+        setError(err.response.data.message);
       });
   };
   return (

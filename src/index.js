@@ -4,19 +4,21 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import SSRProvider from "react-bootstrap/SSRProvider";
-import {CookiesProvider} from "react-cookie"
+import { Provider } from "react-redux";
+import store from "./redux/store";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <SSRProvider>
-    <CookiesProvider>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-    </CookiesProvider>
-  </SSRProvider>
+  <Provider store={store}>
+    <SSRProvider>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </SSRProvider>
+  </Provider>
+
 );
 
 // If you want to start measuring performance in your app, pass a function
