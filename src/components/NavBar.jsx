@@ -3,15 +3,18 @@ import "../App.css";
 import { Button, Container, Form, Nav, Navbar } from "react-bootstrap";
 import { BsCartFill } from "react-icons/bs";
 import { BiSearchAlt } from "react-icons/bi";
+import { useSelector } from "react-redux";
+import { NavLink } from "react-router-dom";
 
 function NavBar() {
+  const state = useSelector((state) => state.handleCart);
   return (
     <header>
       <Navbar className="bg-main rounded-bottom shadow-lg">
         <Container>
-          <Navbar.Brand href="/" className="fw-bold text-white">
+          <NavLink to="/" className="fw-bold text-white text-decoration-none fs-4">
             E-Commerce
-          </Navbar.Brand>
+          </NavLink>
           <Form>
             <Form.Group>
               <div className="icon-inside d-none d-md-block ">
@@ -24,12 +27,13 @@ function NavBar() {
             </Form.Group>
           </Form>
           <Nav className="justify-end align-items-center gap-3">
-            <Nav.Link href="/cart">
+            <NavLink to="/cart" className="position-relative">
               <BsCartFill style={{ width: "2rem", height: "2rem" }} />
-            </Nav.Link>
-            <Nav.Link href="/login">
+              {state.length === 0 ? <span></span> : <span class="position-absolute top-4 start-99 translate-middle badge rounded-pill bg-danger">{state.length}</span>}
+            </NavLink>
+            <NavLink to="/login">
               <Button className="button-secondary">Login</Button>
-            </Nav.Link>
+            </NavLink>
           </Nav>
         </Container>
       </Navbar>

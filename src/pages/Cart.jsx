@@ -2,6 +2,8 @@ import React from "react";
 import "../App.css";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
 import { BsTrash } from "react-icons/bs";
+import { useSelector } from "react-redux";
+import { NavLink } from "react-router-dom";
 
 function Cart() {
   return (
@@ -28,12 +30,12 @@ function Cart() {
                       <tbody>
                         <tr>
                           <td className="d-md-block d-none">
-                            <a href="#">
+                            <div href="#">
                               <img src="img/detailsquare.jpg" alt="White Blouse Armani" />
-                            </a>
+                            </div>
                           </td>
                           <td>
-                            <a href="#">White Blouse Armani</a>
+                            <div href="#">White Blouse Armani</div>
                           </td>
                           <td></td>
                           <td>
@@ -49,12 +51,12 @@ function Cart() {
                         </tr>
                         <tr>
                           <td className="d-md-block d-none">
-                            <a href="#">
+                            <div href="#">
                               <img src="img/basketsquare.jpg" alt="Black Blouse Armani" />
-                            </a>
+                            </div>
                           </td>
                           <td>
-                            <a href="#">Black Blouse Armani</a>
+                            <div href="#">Black Blouse Armani</div>
                           </td>
                           <td></td>
                           <td>
@@ -80,9 +82,9 @@ function Cart() {
                   {/* <!-- /.table-responsive--> */}
                   <div className="box-footer d-flex justify-content-between flex-column flex-lg-row">
                     <div className="left mb-lg-0 mb-2">
-                      <a href="category.html" className="button-main text-decoration-none">
+                      <NavLink to="/" className="button-main text-decoration-none">
                         Continue shopping
-                      </a>
+                      </NavLink>
                     </div>
                     <div className="right">
                       <button type="submit" className="button-secondary">

@@ -1,5 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { addCart } from "../redux/action";
 import { useLocation } from "react-router-dom";
 import { BsFillCartPlusFill } from "react-icons/bs";
 import "../App.css";
@@ -9,6 +11,11 @@ function Detail() {
   const location = useLocation();
   const urlApi = `https://fakestoreapi.com/products/${location.state.id}`;
 
+  const dispatch = useDispatch();
+  const addProduct = (product) => {
+    dispatch(addCart(product));
+    alert("Success Adding To Cart");
+  };
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const getProducts = async () => {
     await axios
@@ -25,6 +32,10 @@ function Detail() {
     getProducts();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  // const handleAddToCart = () => {
+  //   alert("Success Adding To Cart");
+  // };
 
   return (
     <>
@@ -44,7 +55,7 @@ function Detail() {
                 <p className="lead">{products.description}</p>
               </div>
               <div className="d-flex">
-                <button className=" flex-shrink-0 button-main shadow" type="button">
+                <button className=" flex-shrink-0 button-main shadow" type="button" onClick={() => addProduct(products)}>
                   Add To Cart <BsFillCartPlusFill />
                 </button>
               </div>
