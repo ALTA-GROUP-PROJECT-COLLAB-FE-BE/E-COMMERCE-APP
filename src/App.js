@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
@@ -12,20 +12,20 @@ import Register from "./pages/Register";
 import "./App.css";
 
 function App() {
+  const [token, setToken] = useState(localStorage.getItem("userToken") ?? null);
   return (
     <>
       <Router>
-        <NavBar />
+        {token ? <NavBar setToken={setToken} /> : null}
         <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="/detail/:id" element={<Detail />} />
-          <Route path="/edit-product" element={<EditProduct />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/login" element={<Login />} />
+          <Route exact path="/" element={token ? <Home /> : <Login token={token} setToken={setToken} />} />
+          <Route path="/detail/:id" element={token ? <Detail /> : <Login token={token} setToken={setToken} />} />
+          <Route path="/edit-product" element={token ? <EditProduct /> : <Login token={token} setToken={setToken} />} />
+          <Route path="/cart" element={token ? <Cart /> : <Login token={token} setToken={setToken} />} />
           <Route path="/register" element={<Register />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <Footer />
+        {token ? <Footer /> : null}
       </Router>
     </>
   );

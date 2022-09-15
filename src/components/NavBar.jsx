@@ -6,8 +6,12 @@ import { BiSearchAlt } from "react-icons/bi";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 
-function NavBar() {
+function NavBar({ setToken }) {
   const state = useSelector((state) => state.handleCart);
+  const logoutHandler = () => {
+    setToken("");
+    localStorage.clear();
+  };
   return (
     <header>
       <Navbar className="bg-main rounded-bottom shadow-lg">
@@ -31,8 +35,10 @@ function NavBar() {
               <BsCartFill style={{ width: "2rem", height: "2rem" }} />
               {state.length === 0 ? <span></span> : <span class="position-absolute top-4 start-99 translate-middle badge rounded-pill bg-danger">{state.length}</span>}
             </NavLink>
-            <NavLink to="/login">
-              <Button className="button-secondary">Login</Button>
+            <NavLink to="/">
+              <Button className="button-secondary" onClick={logoutHandler}>
+                Logout
+              </Button>
             </NavLink>
           </Nav>
         </Container>

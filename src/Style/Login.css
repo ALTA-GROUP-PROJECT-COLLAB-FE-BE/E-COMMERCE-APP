@@ -1,59 +1,67 @@
-html, body{
-    height: 100%;
+html,
+body {
+  height: 100%;
 }
 
 .form-container {
-    display: flex;
-    width: 100vw;
-    height: 80vh;
-    font-family: 'Poppins';
+  display: flex;
+  width: 100vw;
+  height: 80vh;
+  font-family: "Poppins";
 }
 
 .form-box {
-    max-width: 800px;
-    padding: 30px;
-    box-shadow: rgb(86, 86, 88) 3px 3px 4px;
-    border-radius: 8px;
-    background-color: #E7E5E5;
+  max-width: 800px;
+  padding: 30px;
+  box-shadow: rgb(86, 86, 88) 3px 3px 4px;
+  border-radius: 8px;
+  background-color: #e7e5e5;
 }
 
-.login{
-    padding-left: 155px;
-    font-family: 'Poppins'; font-size: 40px;
-    font-weight: bold;
-    padding-bottom: 10px;
-    border-bottom: 1px solid black;
+.login {
+  display: flex;
+  justify-content: center;
+  font-family: "Poppins";
+  font-size: 40px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
 }
 
-.form-container .title{
-    font-size: 16px;
-    font-weight: bold;
-    padding-top: 10px;
+.form-container .title {
+  font-size: 16px;
+  font-weight: bold;
+  padding-top: 10px;
 }
 
-.email{
-    margin-bottom: 20px;
-    box-shadow: rgb(86, 86, 88) 0px 2px 3px;
-    height: 38px;
-    font-size: 12px;
+.username {
+  margin-bottom: 20px;
+  box-shadow: rgb(86, 86, 88) 0px 2px 3px;
+  height: 38px;
+  font-size: 12px;
 }
 
-.password{
-    margin-bottom: 20px;
-    box-shadow: rgb(86, 86, 88) 0px 2px 3px;
-    margin-bottom: 50px;
-    height: 38px;
-    font-size: 12px;
+.password {
+  margin-bottom: 20px;
+  box-shadow: rgb(86, 86, 88) 0px 2px 3px;
+  margin-bottom: 50px;
+  height: 38px;
+  font-size: 12px;
 }
 
-.button .submit{
-    width: 390px;
-    box-shadow: rgb(86, 86, 88) 3px 3px 2px;
-    background-color: #00C897;
+.button .submit {
+  width: 390px;
+  box-shadow: rgb(86, 86, 88) 3px 3px 2px;
+  background-color: #00c897;
+  border: none;
 }
 
-.signup{
-    font-size: 11px;
-    padding-left: 75px;
-    padding-top: 20px;
+.submit:hover {
+  background-color: #3ebe9e !important;
+}
+
+.signup {
+  font-size: 11px;
+  padding-left: 75px;
+  padding-top: 20px;
 }
