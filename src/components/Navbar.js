@@ -7,7 +7,6 @@ import { BiSearchAlt } from "react-icons/bi";
 function NavBar() {
   return (
     <header>
-
       <Navbar className="bg-main rounded-bottom shadow-lg">
         <Container>
           <Navbar.Brand href="/" className="fw-bold text-white">

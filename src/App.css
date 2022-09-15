@@ -1,8 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;900&display=swap");
+body {
+  margin: 0;
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 .bg-main {
   background-color: #019267 !important;
 }
 
-.bg-secondary {
+.bg-secondaryy {
   background-color: #fdffa9 !important;
 }
 .border-main {
@@ -11,7 +18,7 @@
 }
 
 .card-color {
-  background-color: #d6e8e3;
+  background-color: #019267;
 }
 
 .pointer {
@@ -27,9 +34,9 @@
 }
 
 .button-secondary {
-  background-color: #ffd365;
-  border: none;
-  color: black;
+  background-color: #ffd365 !important;
+  border: none !important;
+  color: black !important;
   padding: 8px 12px 8px 12px;
   border-radius: 5px;
 }
@@ -39,7 +46,7 @@
   color: white;
 }
 .button-secondary:hover {
-  background-color: #fde199;
+  background-color: #fde199 !important;
 }
 
 .btn-main {
@@ -83,9 +90,8 @@ h1 {
 }
 
 .box {
-  background: #fff;
   margin: 0 0 30px;
-  border: solid 1px #e6e6e6;
+
   padding: 30px;
   -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
@@ -93,15 +99,15 @@ h1 {
 
 .box .box-header {
   clear: both;
-  background: #f7f7f7;
+  background: #e6dede;
   margin: -20px -20px 20px;
   padding: 20px;
   border-bottom: solid 1px #eee;
+  border-radius: 10px;
 }
 
 .box .box-footer {
   clear: both;
-  background: #f7f7f7;
   margin: 30px -20px -20px;
   padding: 20px;
   border-top: solid 1px #eee;

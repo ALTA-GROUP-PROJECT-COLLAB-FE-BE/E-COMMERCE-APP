@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "../Style/Product.css";
 
 function MyProduct({ image, title, price, onClickDetail }) {
@@ -12,7 +13,7 @@ function MyProduct({ image, title, price, onClickDetail }) {
                         <div  className="text-black pointer">
                             {title}
                         </div>
-                        <Button onClick={onClickDetail} className="button-product" variant="primary">Edit</Button>
+                        <Button href="/edit-product" onClick={onClickDetail} className="button-product" variant="primary">Edit</Button>
                     </Card.Title>
                     <Card.Text className="text-wrap fs-6 fw-semibold text-dark">${price}</Card.Text>
                 </Card.Body>

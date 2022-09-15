@@ -8,7 +8,7 @@ function EditProduct() {
         <div className="container px-4 px-lg-5 my-5">
           <div className="row gx-4 gx-lg-5 align-items-center">
             <div className="col-md-6">
-              <img className="card-img-top mb-5 mb-md-0" src={""} alt={""} />
+              <img className="card-img-top mb-5 mb-md-0" src="https://wijayajewelry.com/wp-content/uploads/2020/01/2c-2-1024x1024.jpg" alt={""} />
             </div>
             <div className="col-md-6">
               <form>

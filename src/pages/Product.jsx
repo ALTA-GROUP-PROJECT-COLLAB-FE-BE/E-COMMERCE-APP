@@ -3,8 +3,7 @@ import { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import "../Style/Product.css";
-import MyProduct from "../component/MyProduct";
-import Header from "../component/Header"
+import MyProduct from "../components/MyProduct";
 
 
 function Product() {
@@ -37,7 +36,6 @@ function Product() {
 
   return (
     <>
-    <Header />
       <section>
         <Container className="my-5 px-auto rounded border-main justify-center align-items-center">
             <div className="judul">

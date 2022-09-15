@@ -12,15 +12,15 @@ body {
 .bg-secondaryy {
   background-color: #fdffa9 !important;
 }
+
 .border-main {
   border: 10px solid #019267;
   background-color: #ebecc1;
-  
 }
 
 .judul .title{
   width: 250px;
-  margin-left: 440px;
+  margin-left: 43%;
   margin-bottom: 20px;
   margin-top: 20px;
 }
@@ -42,7 +42,7 @@ body {
   background-color: #019267
 }
 
-.button-main {
+/* .button-main {
   background-color: #2bd6ab;
   color: white;
   padding: 8px 12px 8px 12px;
@@ -50,7 +50,7 @@ body {
   border-color: #2bd6ab;
   margin-left: 325px;
   width: 150px;
-}
+} */
 
 .form-label{
   font-family: 'Poppins'; 
@@ -68,125 +68,13 @@ body {
   margin-left: 40%;
 }
 
-.button-secondary {
-  background-color: #ffd365 !important;
-  border: none !important;
-  color: black !important;
-  padding: 8px 12px 8px 12px;
-  border-radius: 5px;
+.card{
+  border: 2px solid yellow;
+  margin-left: 40px;
+  margin-top: 80px;
 }
 
-.button-main:hover {
-  background-color: #2bd6ab;
-  color: white;
-}
-.button-secondary:hover {
-  background-color: #fde199 !important;
-}
-
-.btn-main {
-  background-color: #ffd365 !important;
-  color: whitesmoke;
-  border: #ffd365 !important;
-}
-
-.btn-main:hover {
-  background-color: #fde199 !important;
-}
-
-.custom-search {
-  width: 31.25rem;
-  padding: 5px 0px 5px 25px;
-  border-radius: 35px;
-  border: 0;
-}
-
-.custom-search:focus {
-  outline: none;
-}
-
-.icon-inside {
-  position: relative;
-}
-
-.icon-inside i {
-  position: absolute;
-  left: 5px;
-  top: 4px;
-}
-
-body {
-  overflow-x: hidden;
-  background-color: #f0f0f0;
-}
-
-h1 {
-  font-weight: 700;
-}
-
-.box {
-  margin: 0 0 30px;
-
-  padding: 30px;
-  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-}
-
-.box .box-header {
-  clear: both;
-  background: #e6dede;
-  margin: -20px -20px 20px;
-  padding: 20px;
-  border-bottom: solid 1px #eee;
-  border-radius: 10px;
-}
-
-.box .box-footer {
-  clear: both;
-  margin: 30px -20px -20px;
-  padding: 20px;
-  border-top: solid 1px #eee;
-}
-
-@media (max-width: 767.98px) {
-  .box .box-footer .btn {
-    margin-bottom: 20px;
-  }
-}
-
-#content {
-  margin-top: 40px;
-}
-
-#content #order-summary table {
-  margin-top: 20px;
-}
-
-#content #order-summary table td {
-  color: #999;
-}
-
-#content #order-summary table tr.total td,
-#content #order-summary table tr.total th {
-  font-size: 1.125rem;
-  color: #555;
-  font-weight: 700;
-  border: 2px solid red;
-}
-
-#content #cart .table tbody tr td {
-  vertical-align: middle;
-}
-
-#content #cart .table tbody tr td input {
-  width: 60px;
-  text-align: right;
-}
-
-#content #cart .table tbody tr td img {
-  width: 50px;
-}
-
-#content #cart .table tfoot {
-  font-size: 1.125rem;
+.card-text{
+  background-color: #D9D9D9;
+  opacity: 10;
 }
