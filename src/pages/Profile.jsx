@@ -29,6 +29,13 @@ function Profile() {
         navigate(`/editprofile/${data.id}`, {
             state: {
                 id: data.id,
+                username: data.username,
+                name: {
+                    firstname: data.name.firstname,
+                    lastname: data.name.lastname
+                },
+                email: data.email
+
             },
         });
     };

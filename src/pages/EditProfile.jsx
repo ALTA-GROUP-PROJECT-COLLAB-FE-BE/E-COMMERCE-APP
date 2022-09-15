@@ -3,37 +3,42 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Image from 'react-bootstrap/Image';
 import { Card } from "react-bootstrap";
+import { useLocation } from "react-router-dom";
 
 const EditProfile = () => {
+    const location = useLocation();
     return (
         <>
             <div className="col-12 row">
                 <Card className="shadow-lg justify-center align-self-center col-4">
                     <Image src="https://icon-library.com/images/no-profile-picture-icon/no-profile-picture-icon-2.jpg" style={{ width: "10rem", height: "10rem" }} className="row mx-auto my-2 image-fluid"></Image>
-                    <Button className="col-12 flex-row justify-content-center button-main">Upload Image</Button>
+                    <Form.Group controlId="formFile" className="mb-3">
+                        <Form.Label>Upload Gambar</Form.Label>
+                        <Form.Control type="file" />
+                    </Form.Group>
                     Ukuran Maksimal Gambar adalah 1mb
                 </Card>
                 <Card className="shadow-lg justify-center align-self-center col-8">
                     <Form>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Username</Form.Label>
-                            <Form.Control type="email" placeholder="Username" />
+                            <Form.Control type="email" placeholder={location.state.username} />
                             <Form.Text className="text-muted">
-                                Masukkan Username Baru
+                                Masukkan Username Anda
                             </Form.Text>
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Nama Pengguna</Form.Label>
-                            <Form.Control type="email" placeholder="Nama User" />
+                            <Form.Control type="email" placeholder={location.state.name.firstname + " " + location.state.name.lastname} />
                             <Form.Text className="text-muted">
-                                Masukkan Nama yang diperbaharui
+                                Masukkan Nama Anda
                             </Form.Text>
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Email address</Form.Label>
-                            <Form.Control type="email" placeholder="Enter email" />
+                            <Form.Control type="email" placeholder={location.state.email} />
                             <Form.Text className="text-muted">
-                                Email yang akan digunakan
+                                Masukkan Email Anda
                             </Form.Text>
                         </Form.Group>
 
