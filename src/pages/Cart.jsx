@@ -1,9 +1,8 @@
 import React from "react";
-import "../App.css";
-import { MdOutlineArrowForwardIos } from "react-icons/md";
 import { BsTrash } from "react-icons/bs";
-import { useSelector } from "react-redux";
+import { MdOutlineArrowForwardIos } from "react-icons/md";
 import { NavLink } from "react-router-dom";
+import "../App.css";
 
 function Cart() {
   return (
@@ -30,12 +29,12 @@ function Cart() {
                       <tbody>
                         <tr>
                           <td className="d-md-block d-none">
-                            <div href="#">
+                            <div>
                               <img src="img/detailsquare.jpg" alt="White Blouse Armani" />
                             </div>
                           </td>
                           <td>
-                            <div href="#">White Blouse Armani</div>
+                            <div>White Blouse Armani</div>
                           </td>
                           <td></td>
                           <td>
@@ -44,19 +43,19 @@ function Cart() {
                           <td>$123.00</td>
                           <td>$246.00</td>
                           <td>
-                            <div href="#" className="pointer">
+                            <div className="pointer">
                               <BsTrash />
                             </div>
                           </td>
                         </tr>
                         <tr>
                           <td className="d-md-block d-none">
-                            <div href="#">
+                            <div>
                               <img src="img/basketsquare.jpg" alt="Black Blouse Armani" />
                             </div>
                           </td>
                           <td>
-                            <div href="#">Black Blouse Armani</div>
+                            <div>Black Blouse Armani</div>
                           </td>
                           <td></td>
                           <td>
@@ -65,7 +64,7 @@ function Cart() {
                           <td>$200.00</td>
                           <td>$200.00</td>
                           <td>
-                            <div href="#" className="pointer">
+                            <div className="pointer">
                               <BsTrash />
                             </div>
                           </td>
