@@ -1,20 +1,22 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/NavBar.jsx";
 import Cart from "./pages/Cart";
 import Detail from "./pages/Detail";
-
 import EditProduct from "./pages/EditProduct";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Create from "./pages/Create";
+import Product from "./pages/Product";
 import EditProfile from "./pages/EditProfile";
 import Profile from "./pages/Profile";
 import Checkout from "./pages/Checkout";
 import HistoryOrder from "./pages/HistoryOrder";
 import "./App.css";
+
 
 function App() {
   const [token, setToken] = useState(localStorage.getItem("userToken") ?? null);
@@ -28,6 +30,8 @@ function App() {
           <Route path="/edit-product" element={token ? <EditProduct /> : <Login token={token} setToken={setToken} />} />
           <Route path="/cart" element={token ? <Cart /> : <Login token={token} setToken={setToken} />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/create" element={token ? <Create /> : <Login token={token} setToken={setToken} />} />
+          <Route path="/product" element={token ? <Product /> : <Login token={token} setToken={setToken} />} />
           <Route path="/profile" element={token ? <Profile token={token} setToken={setToken} /> : <Login token={token} setToken={setToken} />} />
           <Route path="/editprofile/:id" element={token ? <EditProfile /> : <Login token={token} setToken={setToken} />} />
           <Route path="/checkout" element={token ? <Checkout /> : <Login token={token} setToken={setToken} />} />
