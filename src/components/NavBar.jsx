@@ -3,8 +3,13 @@ import "../App.css";
 import { Button, Container, Form, Nav, Navbar } from "react-bootstrap";
 import { BsCartFill } from "react-icons/bs";
 import { BiSearchAlt } from "react-icons/bi";
+import { NavLink } from "react-router-dom";
 
-function NavBar() {
+function NavBar({ setToken }) {
+  const logoutHandler = () => {
+    setToken("");
+    localStorage.clear();
+  };
   return (
     <header>
       <Navbar className="bg-main rounded-bottom shadow-lg">
@@ -27,9 +32,11 @@ function NavBar() {
             <Nav.Link href="/cart">
               <BsCartFill style={{ width: "2rem", height: "2rem" }} />
             </Nav.Link>
-            <Nav.Link href="/login">
-              <Button className="button-secondary">Login</Button>
-            </Nav.Link>
+            <NavLink to="/">
+              <Button className="button-secondary" onClick={logoutHandler}>
+                Logout
+              </Button>
+            </NavLink>
           </Nav>
         </Container>
       </Navbar>
