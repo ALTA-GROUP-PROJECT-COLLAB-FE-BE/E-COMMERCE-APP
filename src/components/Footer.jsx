@@ -11,7 +11,7 @@ function Footer() {
             E-Commerce
           </Navbar.Brand>
           <Nav className="justify-end align-items-center ">
-            <Nav.Link href="#insta" className="text-white">
+            <Nav.Link href="https://www.instagram.com/asri_ailin/" className="text-white">
               <BsInstagram style={{ width: "1.2rem", height: "1.2rem" }} />
             </Nav.Link>
             <Nav.Link href="#facebook" className="text-white">

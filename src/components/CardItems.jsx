@@ -10,7 +10,7 @@ function CardItems({ image, title, price, onClickDetail }) {
         <Card.Body className="card-color rounded-bottom">
           <Card.Title style={{ height: "5rem" }} className="text-wrap fs-6 fw-semibold overflow-hidden">
             <div onClick={onClickDetail} className="text-black pointer">
-              {title}
+              {title.substring(0, 20)}...
             </div>
           </Card.Title>
           <Card.Text className="text-wrap fs-6 fw-semibold text-dark lead">${price}</Card.Text>

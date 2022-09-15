@@ -51,7 +51,7 @@ function Detail() {
                 <p className="lead">{products.description}</p>
               </div>
               <div className="d-flex">
-                <button className=" flex-shrink-0 button-main shadow" type="button" onClick={() => addProduct(products)}>
+                <button className=" flex-shrink-0 button-main shadow mt-md-0 mt-3 " type="button" onClick={() => addProduct(products)}>
                   Add To Cart <BsFillCartPlusFill />
                 </button>
               </div>

@@ -8,7 +8,7 @@ function EditProduct() {
         <div className="container px-4 px-lg-5 my-5">
           <div className="row gx-4 gx-lg-5 align-items-center">
             <div className="col-md-6">
-              <img className="card-img-top mb-5 mb-md-0" src={""} alt={""} />
+              <img className="card-img-top mb-5 mb-md-0" src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg" alt={""} />
             </div>
             <div className="col-md-6">
               <form>

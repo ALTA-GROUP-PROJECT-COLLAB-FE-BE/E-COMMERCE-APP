@@ -5,18 +5,15 @@ import { BsCartFill } from "react-icons/bs";
 import { BiSearchAlt } from "react-icons/bi";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
+import { FaUserAlt } from "react-icons/fa";
 
-function NavBar({ setToken }) {
+function NavBar({ token, setToken }) {
   const state = useSelector((state) => state.handleCart);
-  const logoutHandler = () => {
-    setToken("");
-    localStorage.clear();
-  };
   return (
     <header>
-      <Navbar className="bg-main rounded-bottom shadow-lg">
+      <Navbar className="bg-main rounded-bottom shadow-lg py-3">
         <Container>
-          <NavLink to="/" className="fw-bold text-white text-decoration-none fs-4">
+          <NavLink to="/" className="fw-bold text-white text-decoration-none fs-6">
             E-Commerce
           </NavLink>
           <Form>
@@ -35,11 +32,15 @@ function NavBar({ setToken }) {
               <BsCartFill style={{ width: "2rem", height: "2rem" }} className="text-dark" />
               {state.length === 0 ? <span></span> : <span class="position-absolute top-4 start-99 translate-middle badge rounded-pill bg-danger">{state.length}</span>}
             </NavLink>
-            <NavLink to="/">
-              <Button className="button-secondary" onClick={logoutHandler}>
-                Logout
-              </Button>
-            </NavLink>
+            {token ? (
+              <NavLink to="/profile">
+                <Button className="button-secondary rounded-circle">
+                  <FaUserAlt />
+                </Button>
+              </NavLink>
+            ) : (
+              <></>
+            )}
           </Nav>
         </Container>
       </Navbar>
