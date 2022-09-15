@@ -59,4 +59,5 @@ html, body{
     box-shadow: rgb(86, 86, 88) 3px 3px 2px;
     background-color: #00C897;
     margin-bottom: 20px;
+    border: #00C897 1px solid;
 }

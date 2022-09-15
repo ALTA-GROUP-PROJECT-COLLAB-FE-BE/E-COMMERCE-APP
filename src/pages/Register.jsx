@@ -1,6 +1,6 @@
-import { Form, Button } from "react-bootstrap"
+import { Button, Form } from "react-bootstrap"
+import '../Style/Register.css'
 import Header from "../component/Header"
-import '../Style/Register.css';
 
 const Register = () => {
     return (
