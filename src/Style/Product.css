@@ -15,6 +15,7 @@ body {
 .border-main {
   border: 10px solid #019267;
   background-color: #ebecc1;
+  
 }
 
 .judul .title{
@@ -58,8 +59,13 @@ body {
 
 .create{
   border: 2px solid red;
-  margin-top: 40px;
-  margin-left: 20px;
+  height: 50%;
+  width: 100%;
+}
+
+.border-form{
+  border: 2px solid yellow;
+  margin-left: 40%;
 }
 
 .button-secondary {
