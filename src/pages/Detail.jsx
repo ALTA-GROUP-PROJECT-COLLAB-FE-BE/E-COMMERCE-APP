@@ -33,10 +33,6 @@ function Detail() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // const handleAddToCart = () => {
-  //   alert("Success Adding To Cart");
-  // };
-
   return (
     <>
       <section className="py-5 vh-150">
