@@ -7,6 +7,8 @@ import EditProfile from "./pages/EditProfile";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import Profile from "./pages/Profile";
+import Checkout from "./pages/Checkout";
+import HistoryOrder from "./pages/HistoryOrder"
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/editprofile/:id" element={<EditProfile />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/historyorder" element={<HistoryOrder />} />
         </Routes>
         <Footer />
       </Router>
