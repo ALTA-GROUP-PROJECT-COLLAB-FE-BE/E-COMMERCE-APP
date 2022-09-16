@@ -20,14 +20,14 @@ const EditProfile = () => {
                 </Card>
                 <Card className="shadow-lg justify-center align-self-center col-8">
                     <Form>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Group className="mb-3" controlId="formUsername">
                             <Form.Label>Username</Form.Label>
                             <Form.Control type="email" placeholder={location.state.username} />
                             <Form.Text className="text-muted">
                                 Masukkan Username Anda
                             </Form.Text>
                         </Form.Group>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Group className="mb-3" controlId="formNama">
                             <Form.Label>Nama Pengguna</Form.Label>
                             <Form.Control type="email" placeholder={location.state.name.firstname + " " + location.state.name.lastname} />
                             <Form.Text className="text-muted">

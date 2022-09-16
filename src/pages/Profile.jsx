@@ -6,7 +6,7 @@ import "../App.css";
 import ProfileItems from "../components/ProfileItems";
 
 function Profile() {
-    const urlApi = "https://fakestoreapi.com/users/1";
+    const urlApi = "https://fakestoreapi.com/users/7";
     const [profiles, setProfile] = useState([]);
     const navigate = useNavigate();
 
@@ -40,7 +40,7 @@ function Profile() {
         });
     };
     const handleCreate = (data) => {
-        navigate(`/createproduct/${data.id}`, {
+        navigate(`/create/${data.id}`, {
             state: {
                 id: data.id,
             }
@@ -57,14 +57,27 @@ function Profile() {
         })
     }
     const handleProduct = (data) => {
-        navigate(`/myproduct/${data.id}`, {
+        navigate(`/product/${data.id}`, {
             state: {
                 id: data.id,
             }
         })
     }
     const handleRemove = (data) => {
+        var axios = require('axios');
 
+        var config = {
+            method: 'delete',
+            url: `http://3.86.24.153:8000/users/${data.id}`,
+        };
+
+        axios(config)
+            .then(function (response) {
+                console.log(JSON.stringify(response.data));
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
     }
 
     return (

@@ -8,7 +8,7 @@ function ProfileItems({ image, username, onClickEdit, onClickCreate, onClickProd
             <Card className="m-3 shadow-lg justify-center align-self-center">
                 <Card.Body style={{ backgroundColor: "#ebecc1" }}>
                     <Card.Img variant="top" src="https://icon-library.com/images/no-profile-picture-icon/no-profile-picture-icon-2.jpg" style={{ width: "10rem", height: "10rem" }} className="row mx-auto my-2 image-fluid" />
-                    <Card.Title style={{ height: "5rem" }} className="text-wrap fs-6 fw-normal overflow-hidden row justify-center">
+                    <Card.Title style={{ height: "5rem", justifyContent: "center" }} className="text-wrap fs-6 fw-normal overflow-hidden row justify-center">
                         {username}
                     </Card.Title>
 
