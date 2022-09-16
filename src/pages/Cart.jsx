@@ -86,9 +86,11 @@ function Cart() {
                       </NavLink>
                     </div>
                     <div className="right">
-                      <button type="submit" className="button-secondary">
-                        Checkout <MdOutlineArrowForwardIos />
-                      </button>
+                      <NavLink to="/checkout">
+                        <button type="submit" className="button-secondary">
+                          Checkout <MdOutlineArrowForwardIos />
+                        </button>
+                      </NavLink>
                     </div>
                   </div>
                 </form>

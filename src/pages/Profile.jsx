@@ -5,66 +5,71 @@ import { useNavigate } from "react-router-dom";
 import "../App.css";
 import ProfileItems from "../components/ProfileItems";
 
+
 function Profile() {
     const urlApi = "https://fakestoreapi.com/users/7";
     const [profiles, setProfile] = useState([]);
     const navigate = useNavigate();
 
-    const getProfile = async () => {
-        await axios
-            .get(urlApi)
-            .then((res) => {
-                setProfile(res.data);
-            })
-            .catch((err) => {
-                alert(err.message);
-            });
-    };
 
-    useEffect(() => {
-        getProfile();
-    }, []);
+  const getProfile = async () => {
+    await axios
+      .get(urlApi)
+      .then((res) => {
+        setProfile(res.data);
+      })
+      .catch((err) => {
+        alert(err.message);
+      });
+  };
 
-    const handleEdit = (data) => {
-        navigate(`/editprofile/${data.id}`, {
-            state: {
-                id: data.id,
-                username: data.username,
-                name: {
-                    firstname: data.name.firstname,
-                    lastname: data.name.lastname
-                },
-                email: data.email
+  useEffect(() => {
+    getProfile();
+  }, []);
 
-            },
-        });
-    };
-    const handleCreate = (data) => {
-        navigate(`/create/${data.id}`, {
-            state: {
-                id: data.id,
-            }
-        })
-    }
-    const handleLogOut = () => {
+  const handleEdit = (data) => {
+    navigate(`/editprofile/${data.id}`, {
+      state: {
+        id: data.id,
+        username: data.username,
+        name: {
+          firstname: data.name.firstname,
+          lastname: data.name.lastname,
+        },
+        email: data.email,
+      },
+    });
+  };
+  const handleCreate = (data) => {
+    navigate(`/create/${data.id}`, {
+      state: {
+        id: data.id,
+      },
+    });
+  };
 
-    }
-    const handleOrder = (data) => {
-        navigate(`/historyorder/${data.id}`, {
-            state: {
-                id: data.id,
-            }
-        })
-    }
-    const handleProduct = (data) => {
-        navigate(`/product/${data.id}`, {
-            state: {
-                id: data.id,
-            }
-        })
-    }
-    const handleRemove = (data) => {
-        var axios = require('axios');
+
+  const logoutHandler = () => {
+    setToken("");
+    localStorage.clear();
+  };
+
+  const handleOrder = (data) => {
+    navigate(`/historyorder/${data.id}`, {
+      state: {
+        id: data.id,
+      },
+    });
+  };
+  const handleProduct = (data) => {
+    navigate(`/product/${data.id}`, {
+      state: {
+        id: data.id,
+      },
+    });
+  };
+  const handleRemove = (data) => {
+          var axios = require('axios');
 
         var config = {
             method: 'delete',
@@ -78,21 +83,29 @@ function Profile() {
             .catch(function (error) {
                 console.log(error);
             });
-    }
+  };
 
-    return (
-        <>
-            <section>
-                <Container className="my-5 px-auto rounded border-main justify-center align-items-center">
-                    <div className="row mx-auto">
-                        <ProfileItems username={profiles.username} key={profiles.id} onClickEdit={() => handleEdit(profiles)}
-                            onClickCreate={() => handleCreate(profiles)} onClickLogOut={() => handleLogOut()} onClickOrder={() => handleOrder()}
-                            onClickProduct={() => handleProduct(profiles)} onClickRemove={() => handleRemove(profiles)} />;
-                    </div>
-                </Container>
-            </section>
-        </>
-    );
+  return (
+    <>
+      <section>
+        <Container className="my-5 px-auto rounded border-main justify-center align-items-center">
+          <div className="row mx-auto">
+            <ProfileItems
+              username={profiles.username}
+              key={profiles.id}
+              onClickEdit={() => handleEdit(profiles)}
+              onClickCreate={() => handleCreate(profiles)}
+              onClickOrder={() => handleOrder()}
+              onClickProduct={() => handleProduct(profiles)}
+              onClickRemove={() => handleRemove(profiles)}
+              logoutHandler={()=>logoutHandler()}
+            />
+            ;
+          </div>
+        </Container>
+      </section>
+    </>
+  );
 }
 
 export default Profile;

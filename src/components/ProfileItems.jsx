@@ -1,6 +1,8 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 import "../App.css";
+
 
 function ProfileItems({ image, username, onClickEdit, onClickCreate, onClickProduct, onClickOrder, onClickLogOut, onClickRemove }) {
     return (
@@ -12,20 +14,35 @@ function ProfileItems({ image, username, onClickEdit, onClickCreate, onClickProd
                         {username}
                     </Card.Title>
 
-                    <Button className="col-12 flex-row justify-content-center button-main" onClick={onClickEdit}>Edit Profile</Button>
-                    <div className="my-2">
-                        <Button className="col-lg-4 col-md-4 col-12 justify-center" onClick={onClickCreate}>Create Product</Button>
-                        <Button className="col-lg-4 col-md-4 col-12 justify-center" onClick={onClickProduct}>My Product</Button>
-                        <Button className="col-lg-4 col-md-4 col-12 justify-center" onClick={onClickOrder}>My Order</Button>
-                    </div>
-                    <div className="my-2">
-                        <Button className="col-lg-6 col-md-6 col-12 justify-content-end" onClick={onClickLogOut}>Log Out</Button>
-                        <Button className="col-lg-6 col-md-6 col-12 justify-content-start btn btn-danger" onClick={onClickRemove}>Remove</Button>
-                    </div>
-                </Card.Body>
-            </Card>
-        </div>
-    );
+
+          <Button className="col-12 flex-row justify-content-center button-main" onClick={onClickEdit}>
+            Edit Profile
+          </Button>
+          <div className="my-2 flex-row">
+            <Button className="col-lg-4 col-md-4 col-12 justify-center" onClick={onClickCreate}>
+              Create Product
+            </Button>
+            <Button className="col-lg-4 col-md-4 col-12 justify-center" onClick={onClickProduct}>
+              My Product
+            </Button>
+            <Button className="col-lg-4 col-md-4 col-12 justify-center" onClick={onClickOrder}>
+              My Order
+            </Button>
+          </div>
+          <div className="my-2">
+            <NavLink to="/">
+              <Button className="col-lg-6 col-md-6 col-12 justify-content-end" onClick={logoutHandler}>
+                Log Out
+              </Button>
+            </NavLink>
+            <Button className="col-lg-6 col-md-6 col-12 justify-content-start btn btn-danger" onClick={onClickRemove}>
+              Remove
+            </Button>
+          </div>
+        </Card.Body>
+      </Card>
+    </div>
+  );
 }
 
 export default ProfileItems;
