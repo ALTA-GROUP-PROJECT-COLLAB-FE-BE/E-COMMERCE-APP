@@ -5,10 +5,12 @@ import { useNavigate } from "react-router-dom";
 import "../App.css";
 import ProfileItems from "../components/ProfileItems";
 
-function Profile({ token, setToken }) {
-  const urlApi = "https://fakestoreapi.com/users/1";
-  const [profiles, setProfile] = useState([]);
-  const navigate = useNavigate();
+
+function Profile() {
+    const urlApi = "https://fakestoreapi.com/users/7";
+    const [profiles, setProfile] = useState([]);
+    const navigate = useNavigate();
+
 
   const getProfile = async () => {
     await axios
@@ -39,12 +41,13 @@ function Profile({ token, setToken }) {
     });
   };
   const handleCreate = (data) => {
-    navigate(`/createproduct/${data.id}`, {
+    navigate(`/create/${data.id}`, {
       state: {
         id: data.id,
       },
     });
   };
+
 
   const logoutHandler = () => {
     setToken("");
@@ -59,13 +62,28 @@ function Profile({ token, setToken }) {
     });
   };
   const handleProduct = (data) => {
-    navigate(`/myproduct/${data.id}`, {
+    navigate(`/product/${data.id}`, {
       state: {
         id: data.id,
       },
     });
   };
-  const handleRemove = (data) => {};
+  const handleRemove = (data) => {
+          var axios = require('axios');
+
+        var config = {
+            method: 'delete',
+            url: `http://3.86.24.153:8000/users/${data.id}`,
+        };
+
+        axios(config)
+            .then(function (response) {
+                console.log(JSON.stringify(response.data));
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+  };
 
   return (
     <>
