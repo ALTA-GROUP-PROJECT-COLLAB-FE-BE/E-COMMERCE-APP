@@ -7,9 +7,9 @@ import ProfileItems from "../components/ProfileItems";
 
 
 function Profile() {
-    const urlApi = "https://fakestoreapi.com/users/7";
-    const [profiles, setProfile] = useState([]);
-    const navigate = useNavigate();
+  const urlApi = "https://fakestoreapi.com/users/7";
+  const [profiles, setProfile] = useState([]);
+  const navigate = useNavigate();
 
 
   const getProfile = async () => {
@@ -41,7 +41,7 @@ function Profile() {
     });
   };
   const handleCreate = (data) => {
-    navigate(`/create/${data.id}`, {
+    navigate(`/create/`, {
       state: {
         id: data.id,
       },
@@ -50,39 +50,39 @@ function Profile() {
 
 
   const logoutHandler = () => {
-    setToken("");
+    /*setToken("");*/
     localStorage.clear();
   };
 
   const handleOrder = (data) => {
-    navigate(`/historyorder/${data.id}`, {
+    navigate(`/historyorder/`, {
       state: {
         id: data.id,
       },
     });
   };
   const handleProduct = (data) => {
-    navigate(`/product/${data.id}`, {
+    navigate(`/product/`, {
       state: {
         id: data.id,
       },
     });
   };
   const handleRemove = (data) => {
-          var axios = require('axios');
+    var axios = require('axios');
 
-        var config = {
-            method: 'delete',
-            url: `http://3.86.24.153:8000/users/${data.id}`,
-        };
+    var config = {
+      method: 'delete',
+      url: `http://3.86.24.153:8000/users/${data.id}`,
+    };
 
-        axios(config)
-            .then(function (response) {
-                console.log(JSON.stringify(response.data));
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
+    axios(config)
+      .then(function (response) {
+        console.log(JSON.stringify(response.data));
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   };
 
   return (
@@ -98,7 +98,7 @@ function Profile() {
               onClickOrder={() => handleOrder()}
               onClickProduct={() => handleProduct(profiles)}
               onClickRemove={() => handleRemove(profiles)}
-              logoutHandler={()=>logoutHandler()}
+              logoutHandler={() => logoutHandler()}
             />
             ;
           </div>

@@ -4,15 +4,15 @@ import { NavLink } from "react-router-dom";
 import "../App.css";
 
 
-function ProfileItems({ image, username, onClickEdit, onClickCreate, onClickProduct, onClickOrder, onClickLogOut, onClickRemove }) {
-    return (
-        <div className="col-md-12 col-lg-12 col-12 justify-center" /*style={{ display: "flex", alignContent: "center" }}*/>
-            <Card className="m-3 shadow-lg justify-center align-self-center">
-                <Card.Body style={{ backgroundColor: "#ebecc1" }}>
-                    <Card.Img variant="top" src="https://icon-library.com/images/no-profile-picture-icon/no-profile-picture-icon-2.jpg" style={{ width: "10rem", height: "10rem" }} className="row mx-auto my-2 image-fluid" />
-                    <Card.Title style={{ height: "5rem", justifyContent: "center" }} className="text-wrap fs-6 fw-normal overflow-hidden row justify-center">
-                        {username}
-                    </Card.Title>
+function ProfileItems({ image, username, onClickEdit, onClickCreate, onClickProduct, onClickOrder, onClickLogOut, onClickRemove, logoutHandler }) {
+  return (
+    <div className="col-md-12 col-lg-12 col-12 justify-center" /*style={{ display: "flex", alignContent: "center" }}*/>
+      <Card className="m-3 shadow-lg justify-center align-self-center">
+        <Card.Body style={{ backgroundColor: "#ebecc1" }}>
+          <Card.Img variant="top" src="https://icon-library.com/images/no-profile-picture-icon/no-profile-picture-icon-2.jpg" style={{ width: "10rem", height: "10rem" }} className="row mx-auto my-2 image-fluid" />
+          <Card.Title style={{ height: "5rem", justifyContent: "center" }} className="text-wrap fs-6 fw-normal overflow-hidden row justify-center">
+            {username}
+          </Card.Title>
 
 
           <Button className="col-12 flex-row justify-content-center button-main" onClick={onClickEdit}>
